@@ -7,17 +7,20 @@ const HeaderBar = styled.div`
   background: #d5d3d3;
   min-height: 50px;
   box-shadow: 2px 2px 10px;
-  padding-top: 20px;
 `;
 
 const HeaderSection = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 10px 60px;
   margin: auto;
   position: relative;
   user-select: none;
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
     max-width: 80%;
   }
   @media screen and (min-width: 800px) {
@@ -40,8 +43,8 @@ const Header = () => {
       <HeaderBar>
         <HeaderSection>
           <div>
-            <p style={{ margin: 0 }}>Eldana Niyetbek</p>
-            <p style={{ fontSize: '9px' }}>Mechanical Engineer</p>
+            <p style={{ margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
+            <p style={{ fontSize: '9px', fontWeight: 500 }}>Mechanical Engineer</p>
           </div>
           <div>
             <Link to="/">

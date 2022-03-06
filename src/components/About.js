@@ -7,7 +7,6 @@ const FlexBox = styled.div`
   justify-content: center;
   margin: 0 auto;
   padding: 0 60px;
-  margin-top: 40px;
   @media screen and (min-width: 500px) {
     max-width: 80%;
   }
@@ -22,10 +21,15 @@ const ContentWrapper = styled.div`
   margin: 10px;
 `;
 
+const StyledImage = styled.img`
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px;
+`;
+
 
 const About = () => (
   <div>
-    <FlexBox>
+    <FlexBox style={{ marginTop: '40px' }}>
       <ContentWrapper>
         <h2>About me</h2>
         <p>
@@ -34,28 +38,37 @@ const About = () => (
         </p>
       </ContentWrapper>
       <ContentWrapper style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img
+        <StyledImage
           alt="Eldana Nietbek"
           height="200px"
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.WJpP1SPWIHAfDWzsqtk1XwHaGV%26pid%3DApi&f=1"
         />
       </ContentWrapper>
     </FlexBox>
-    <FlexBox style={{ justifyContent: 'space-around' }}>
-      <div>
-        <h4>Work History</h4>
-      </div>
-      <div>
-        <h4>Clients</h4>
-        <p>...</p>
-        <p>...</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>LinkedIn: ....</p>
-        <p>Email: ....</p>
-      </div>
-    </FlexBox>
+    <section style={{ marginTop: '60px' }}>
+      <FlexBox style={{ justifyContent: 'space-around' }}>
+        <div>
+          <h4 style={{ margin: 0 }}>Work History</h4>
+        </div>
+        <div>
+          <h4 style={{ margin: 0 }}>Clients</h4>
+        </div>
+        <div>
+          <h4 style={{ margin: 0 }}>Contact</h4>
+        </div>
+      </FlexBox>
+      <FlexBox style={{ justifyContent: 'space-around' }}>
+        <div>
+          <p>Work History</p>
+        </div>
+        <div>
+          <p>Clients</p>
+        </div>
+        <div>
+          <p>Contact</p>
+        </div>
+      </FlexBox>
+    </section>
   </div>
 );
 
