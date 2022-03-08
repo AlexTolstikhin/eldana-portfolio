@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import classNames from 'classnames';
 import PageMenuButton from './PageMenuButton';
+import '../styles/header_animation.css';
 
 const HeaderBar = styled.div`
   background: #d5d3d3;
@@ -37,19 +39,35 @@ const PageMenuSlash = styled.span`
 `
 
 const Header = () => {
+  const nameElement = useRef();
+  const menuElement = useRef();
   const location = useLocation();
+  const [currentPath, setCurrentPath] = useState(location.pathname);
+
+  useEffect(() => {
+    const animatedElements = [menuElement, nameElement];
+    if (currentPath !== location.pathname) {
+      animatedElements.forEach((elRef) => {
+        elRef.current.className="";
+        void elRef.current.offsetWidth;
+        elRef.current.className="slide-up-down";
+      });
+      setCurrentPath(location.pathname);
+    }
+  }, [location.pathname, currentPath]);
+
   return (
     <>
       <HeaderBar>
         <HeaderSection>
-          <div>
+          <div ref={nameElement} className="slide-down">
             <p style={{ margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
             <p style={{ fontSize: '9px', fontWeight: 500 }}>Mechanical Engineer</p>
           </div>
-          <div>
+          <div ref={menuElement} className="slide-down">
             <Link to="/">
               <PageMenuButton
-                isSelected={location.pathname === '/'}
+                isSelected={currentPath === '/'}
                 value="work"
                 label="Work"
               >
@@ -59,7 +77,7 @@ const Header = () => {
             <PageMenuSlash>{` / `}</PageMenuSlash>
             <Link to="/about">
               <PageMenuButton
-                isSelected={location.pathname === '/about'}
+                isSelected={currentPath === '/about'}
                 label="About"
                 value="about"
               >

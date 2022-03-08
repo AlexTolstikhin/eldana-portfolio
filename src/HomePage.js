@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import './styles/body_animation.css';
 
 const PageTitle = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ const PageSubTitle = styled.p`
 
 function HomePage() {
   return (
-    <div>
+    <section className="opacity-show">
       <PageTitle>
         <div>The Collective</div>
         <div>Work of Eldana Niyetbek</div>
@@ -42,7 +43,7 @@ function HomePage() {
         <div>Intro text underneath the headline</div>
       </PageSubTitle>
       <hr style={{ maxWidth: '100px' }}/>
-    </div>
+    </section>
   );
 }
 

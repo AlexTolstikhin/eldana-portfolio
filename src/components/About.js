@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../styles/body_animation.css';
+
 
 const FlexBox = styled.div`
   display: flex;
@@ -28,7 +30,7 @@ const StyledImage = styled.img`
 
 
 const About = () => (
-  <div>
+  <section className="opacity-show">
     <FlexBox style={{ marginTop: '40px' }}>
       <ContentWrapper>
         <h2>About me</h2>
@@ -45,7 +47,7 @@ const About = () => (
         />
       </ContentWrapper>
     </FlexBox>
-    <section style={{ marginTop: '60px' }}>
+    <div style={{ marginTop: '60px' }}>
       <FlexBox style={{ justifyContent: 'space-around' }}>
         <div>
           <h4 style={{ margin: 0 }}>Work History</h4>
@@ -68,8 +70,8 @@ const About = () => (
           <p>Contact</p>
         </div>
       </FlexBox>
-    </section>
-  </div>
+    </div>
+  </section>
 );
 
 export default About;
