@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import classNames from 'classnames';
 import PageMenuButton from './PageMenuButton';
 import '../styles/header_animation.css';
 
@@ -61,8 +60,8 @@ const Header = () => {
       <HeaderBar>
         <HeaderSection>
           <div ref={nameElement} className="slide-down">
-            <p style={{ margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
-            <p style={{ fontSize: '9px', fontWeight: 500 }}>Mechanical Engineer</p>
+            <p style={{ fontSize: '16px', margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
+            <p style={{ fontSize: '14px', fontWeight: 500 }}>Mechanical Engineer</p>
           </div>
           <div ref={menuElement} className="slide-down">
             <Link to="/">

@@ -1,7 +1,9 @@
 import React from 'react';
+import HomePageImages from './components/HomePageImages';
 import './App.css';
 import styled from 'styled-components';
 import './styles/body_animation.css';
+
 
 const PageTitle = styled.div`
   display: flex;
@@ -11,7 +13,7 @@ const PageTitle = styled.div`
   margin-top: 40px;
   text-align: center;
   text-transform: uppercase;
-  font-family: Georgia;
+  font-family: 'Fredericka the Great', cursive;
   user-select: none;
   font-weight: 700;
   @media screen and (min-width: 800px) {
@@ -23,7 +25,7 @@ const PageSubTitle = styled.p`
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
-  font-family: Georgia;
+  font-family: 'Fredericka the Great', cursive;
   user-select: none;
   @media screen and (min-width: 800px) {
     font-size: 2vw;
@@ -42,7 +44,8 @@ function HomePage() {
       <PageSubTitle>
         <div>Intro text underneath the headline</div>
       </PageSubTitle>
-      <hr style={{ maxWidth: '100px' }}/>
+      <hr style={{ maxWidth: '40%' }}/>
+      <HomePageImages />
     </section>
   );
 }
