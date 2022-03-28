@@ -5,9 +5,7 @@ import PageMenuButton from './PageMenuButton';
 import '../styles/header_animation.css';
 
 const HeaderBar = styled.div`
-  background: #d5d3d3;
   min-height: 50px;
-  box-shadow: 2px 2px 10px;
 `;
 
 const HeaderSection = styled.div`
