@@ -1,77 +1,95 @@
 import React from 'react';
 import styled from 'styled-components';
+import Title from './Title';
+import SubTitle from './SubTitle';
 import '../styles/body_animation.css';
+import ProfilePhoto from '../assets/profile_photo.jpg'
+import ResumePDF from '../assets/Eldana_Niyetbek.pdf';
+import ResumeImage from '../assets/resume.png';
+
 
 
 const FlexBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  padding: 0 60px;
+  align-items: center;
+  margin: 0 20px;
   @media screen and (min-width: 500px) {
+    margin: 0 auto;
     max-width: 80%;
   }
   @media screen and (min-width: 1000px) {
     max-width: 60%;
-    flex-direction: row;
-    align-items: center;
   }
-`;
-
-const ContentWrapper = styled.div`
-  margin: 10px;
 `;
 
 const StyledImage = styled.img`
   border-radius: 5px;
+  margin-top: 40px;
   box-shadow: 2px 2px 10px;
 `;
 
+const StyledButton = styled.button`
+  background-color: #9597A3;
+  border-radius: 10px;
+  position: relative;
+  border: 0px;
+  box-shadow: 2px 2px 10px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 20px;
+  :hover {
+    bottom: 3px;
+    box-shadow: 2px 2px 20px;
+  }
+`;
 
-const About = () => (
-  <section className="opacity-show">
-    <FlexBox style={{ marginTop: '40px' }}>
-      <ContentWrapper>
-        <h2>About me</h2>
-        <p>
-          You can use this space here to write a bit more about the work you show on the side.
-          PS: You can duplicate and flip this layer too, helping you to quickly build a elegant layout.
-        </p>
-      </ContentWrapper>
-      <ContentWrapper style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+const About = () => {
+  const downloadResume = () => {
+    window.open(ResumePDF, '_blank');
+  };
+
+  return (
+    <section className="opacity-show">
+      <FlexBox>
+        <Title>About me</Title>
+        <SubTitle>
+          My experience includes
+          full-time assisting in model-based design and production engineering of products
+          for datacenters using CAD/BIM tools to create one integrated process involving all
+          disciplines.
+        </SubTitle>
+      </FlexBox>
+      <hr style={{ maxWidth: '40%' }}/>
+      <FlexBox>
         <StyledImage
           alt="Eldana Nietbek"
-          height="200px"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.WJpP1SPWIHAfDWzsqtk1XwHaGV%26pid%3DApi&f=1"
+          height="250px"
+          src={ProfilePhoto}
         />
-      </ContentWrapper>
-    </FlexBox>
-    <div style={{ marginTop: '60px' }}>
-      <FlexBox style={{ justifyContent: 'space-around' }}>
-        <div>
-          <h4 style={{ margin: 0 }}>Work History</h4>
-        </div>
-        <div>
-          <h4 style={{ margin: 0 }}>Clients</h4>
-        </div>
-        <div>
-          <h4 style={{ margin: 0 }}>Contact</h4>
-        </div>
       </FlexBox>
-      <FlexBox style={{ justifyContent: 'space-around' }}>
-        <div>
-          <p>Work History</p>
+      <FlexBox >
+        <div style={{ marginTop: '40px' }}>
+          <StyledButton
+            onClick={downloadResume}
+          >
+            Download CV
+          </StyledButton>
         </div>
-        <div>
-          <p>Clients</p>
-        </div>
-        <div>
-          <p>Contact</p>
-        </div>
+        <StyledImage
+          alt="Eldana Nietbek"
+          height="100%"
+          width="100%"
+          src={ResumeImage}
+        />
       </FlexBox>
-    </div>
-  </section>
-);
+    </section>
+  );
+}
+
 
 export default About;

@@ -17,6 +17,7 @@ const HeaderSection = styled.div`
   text-align: center;
   justify-content: space-between;
   padding: 10px 60px;
+  font-family: 'Open Sans', sans-serif;
   margin: auto;
   position: relative;
   user-select: none;
@@ -32,6 +33,8 @@ const HeaderSection = styled.div`
 const PageMenuSlash = styled.span`
   font-size: 15px;
   user-select: none;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 800;
   @media screen and (min-width: 800px) {
     font-size: 1.5vw;
   }
@@ -60,8 +63,8 @@ const Header = () => {
       <HeaderBar>
         <HeaderSection>
           <div ref={nameElement} className="slide-down">
-            <p style={{ fontSize: '16px', margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
-            <p style={{ fontSize: '14px', fontWeight: 500 }}>Mechanical Engineer</p>
+            <p style={{ fontSize: '18px', margin: 0, fontWeight: 600 }}>Eldana Niyetbek</p>
+            <p style={{ fontSize: '12px', fontWeight: 500 }}>Mechanical Engineer</p>
           </div>
           <div ref={menuElement} className="slide-down">
             <Link to="/">

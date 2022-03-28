@@ -1,36 +1,9 @@
 import React from 'react';
 import HomePageImages from './components/HomePageImages';
+import PageTitle from './components/Title';
+import SubTitle from './components/SubTitle';
 import './App.css';
-import styled from 'styled-components';
 import './styles/body_animation.css';
-
-
-const PageTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 25px;
-  margin-top: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Fredericka the Great', cursive;
-  user-select: none;
-  font-weight: 700;
-  @media screen and (min-width: 800px) {
-    font-size: 4vw;
-  }
-`;
-
-const PageSubTitle = styled.p`
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Fredericka the Great', cursive;
-  user-select: none;
-  @media screen and (min-width: 800px) {
-    font-size: 2vw;
-  }
-`;
 
 
 
@@ -41,9 +14,9 @@ function HomePage() {
         <div>The Collective</div>
         <div>Work of Eldana Niyetbek</div>
       </PageTitle>
-      <PageSubTitle>
+      <SubTitle>
         <div>Intro text underneath the headline</div>
-      </PageSubTitle>
+      </SubTitle>
       <hr style={{ maxWidth: '40%' }}/>
       <HomePageImages />
     </section>

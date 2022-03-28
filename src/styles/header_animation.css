@@ -1,5 +1,5 @@
 .slide-down {
-  animation: down 1s ease-out;
+  animation: down 2s ease-out;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .slide-up-down {
-  animation: updown 0.5s ease-in-out;
+  animation: updown 1s ease-in-out;
   position: relative;
 }
 @keyframes updown {
