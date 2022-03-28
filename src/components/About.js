@@ -28,6 +28,7 @@ const StyledImage = styled.img`
   border-radius: 5px;
   margin-top: 40px;
   box-shadow: 2px 2px 10px;
+  cursor: pointer;
 `;
 
 const StyledButton = styled.button`
@@ -53,6 +54,10 @@ const About = () => {
     window.open(ResumePDF, '_blank');
   };
 
+  const onImageClick = () => {
+    window.open('https://www.linkedin.com/in/eldananiyetbek/', '_blank');
+  }
+
   return (
     <section className="opacity-show">
       <FlexBox>
@@ -69,6 +74,7 @@ const About = () => {
         <StyledImage
           alt="Eldana Nietbek"
           height="250px"
+          onClick={onImageClick}
           src={ProfilePhoto}
         />
       </FlexBox>
@@ -81,10 +87,11 @@ const About = () => {
           </StyledButton>
         </div>
         <StyledImage
-          alt="Eldana Nietbek"
+          alt="Eldana Nietbek CV"
           height="100%"
-          width="100%"
+          onClick={downloadResume}
           src={ResumeImage}
+          width="100%"
         />
       </FlexBox>
     </section>
