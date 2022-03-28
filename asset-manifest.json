@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/eldana-portfolio/static/css/main.fc55c047.css",
-    "main.js": "/eldana-portfolio/static/js/main.9e3862ac.js",
+    "main.js": "/eldana-portfolio/static/js/main.281b813a.js",
     "static/js/787.5d0bc805.chunk.js": "/eldana-portfolio/static/js/787.5d0bc805.chunk.js",
     "static/media/resume.png": "/eldana-portfolio/static/media/resume.d1b77a1e9cccb852d4c2.png",
     "static/media/profile_photo.jpg": "/eldana-portfolio/static/media/profile_photo.29830918f503832c28c6.jpg",
     "static/media/Eldana_Niyetbek.pdf": "/eldana-portfolio/static/media/Eldana_Niyetbek.0a92a0cd269a1ee30db1.pdf",
     "index.html": "/eldana-portfolio/index.html",
     "main.fc55c047.css.map": "/eldana-portfolio/static/css/main.fc55c047.css.map",
-    "main.9e3862ac.js.map": "/eldana-portfolio/static/js/main.9e3862ac.js.map",
+    "main.281b813a.js.map": "/eldana-portfolio/static/js/main.281b813a.js.map",
     "787.5d0bc805.chunk.js.map": "/eldana-portfolio/static/js/787.5d0bc805.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc55c047.css",
-    "static/js/main.9e3862ac.js"
+    "static/js/main.281b813a.js"
   ]
 }
