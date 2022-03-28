@@ -67,7 +67,7 @@ const Header = () => {
           <div ref={menuElement} className="slide-down">
             <Link to="/eldana-portfolio">
               <PageMenuButton
-                isSelected={currentPath === '/eldana-portfolio'}
+                isSelected={currentPath === '/eldana-portfolio' || currentPath === '/eldana-portfolio/'}
                 value="work"
                 label="Work"
               >
