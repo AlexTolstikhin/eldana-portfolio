@@ -69,7 +69,7 @@ const Header = () => {
           <div ref={menuElement} className="slide-down">
             <Link to="/eldana-portfolio">
               <PageMenuButton
-                isSelected={currentPath === '/'}
+                isSelected={currentPath === '/eldana-portfolio'}
                 value="work"
                 label="Work"
               >
@@ -79,7 +79,7 @@ const Header = () => {
             <PageMenuSlash>{` / `}</PageMenuSlash>
             <Link to="/eldana-portfolio/about">
               <PageMenuButton
-                isSelected={currentPath === '/about'}
+                isSelected={currentPath === '/eldana-portfolio/about'}
                 label="About"
                 value="about"
               >
