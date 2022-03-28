@@ -17,8 +17,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route exact path="/eldana-niyetbek" element={<HomePage />} />
-        <Route path="/eldana-niyetbek/about" element={<About />}/>
+        <Route exact path="/eldana-portfolio" element={<HomePage />} />
+        <Route path="/eldana-portfolio/about" element={<About />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
